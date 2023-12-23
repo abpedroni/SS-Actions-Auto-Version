@@ -22,11 +22,11 @@ jobs:
         run: echo "1.0.${GITHUB_RUN_NUMBER}.${GITHUB_RUN_ID}"
 
       - name: Bump version and push tag
+        if: ${{ !startsWith(github.ref, 'refs/heads/release/') }}
         id: mathieudutourtag_version
         uses: mathieudutour/github-tag-action@v6.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          #dry_run: true
 
       - name: Build and push
         run: |-
