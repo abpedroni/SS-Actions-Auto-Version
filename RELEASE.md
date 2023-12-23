@@ -4,4 +4,6 @@ sub prs;
 
 TST
 
-RELEASE v2.1.2
+release/JIRA-10103
+- [X] TASK SOE-106
+- [X] TASK feat/SOE333
